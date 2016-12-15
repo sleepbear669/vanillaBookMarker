@@ -6,7 +6,6 @@ import {qs , $on} from './helpers';
 
 const phraseInput = qs('.phrase-input');
 const phraseItemBox = qs('.phrase-item-box');
-
 const store = new FireBaseStore();
 const template = new Template();
 
@@ -14,6 +13,14 @@ const phraseRender = (phraseList) => {
     phraseItemBox.innerHTML = template.makeItemList(phraseList);
 
 };
+
+$on(phraseItemBox, 'click', e => {
+    const element = e.target;
+    if(element.classList.contains('phrase-remove')){
+        const parent = element.parentNode;
+        store.removeItem(parent.dataset.id);
+    }
+});
 
 $on(phraseInput, 'change', e => {
         let phrase = e.target.value.trim();
@@ -37,4 +44,3 @@ const updateStore = items => {
 };
 
 store.on('book-marker/', 'value', updateStore);
-//store.on('phrase/', 'child_added', log('child_added'));

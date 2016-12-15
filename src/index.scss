@@ -1,0 +1,9 @@
+.phrase-item{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 10px 0;
+  .phrase-remove{
+    margin-left: auto;
+  }
+}

@@ -26,6 +26,16 @@ class FireBaseStore {
                 if (handle)
                     handle();
             });
-    }
+    };
+
+    removeItem = (key, handle)=> {
+        this.database.ref('book-marker/' + key).remove()
+            .then(() => {
+                if (handle)
+                    handle();
+            });
+    };
+
+
 }
 export default FireBaseStore;

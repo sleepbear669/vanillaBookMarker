@@ -846,7 +846,7 @@
 	    };
 
 	    this.templateMaker = function (item) {
-	        return '<tr data-id=\'' + item.id + '\' class="phrase-item">\n                    <td>' + item.phrase + '</td>\n                </tr>';
+	        return '<li data-id=\'' + item.id + '\' class="phrase-item list-group-item">\n                    <span>' + item.phrase + '</span>\n                    <i class="mdi mdi-close btn-remove"></i>\n                </li>';
 	    };
 	};
 

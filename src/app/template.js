@@ -4,8 +4,9 @@ export default class Template{
         return itemList.reduce((a, item) => a + this.templateMaker(item), '');
     };
     templateMaker = item => {
-        return `<tr data-id='${item.id}' class="phrase-item">
-                    <td>${item.phrase}</td>
-                </tr>`;
+        return `<li data-id='${item.id}' class="phrase-item">
+                    <span>${item.phrase}</span>
+                    <i class="mdi mdi-close phrase-remove"></i>
+                </li>`;
     }
 }

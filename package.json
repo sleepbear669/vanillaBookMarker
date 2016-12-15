@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --watch --hot --inline --port 9090 --config webpack.config.dev.js",
+    "start": "webpack-dev-server --progress --colors --watch --hot --inline --port 9091 --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prob.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +31,7 @@
     "clean-webpack-plugin": "^0.1.14",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "^3.13.0",
     "rxjs": "5.0.0-beta.12",
